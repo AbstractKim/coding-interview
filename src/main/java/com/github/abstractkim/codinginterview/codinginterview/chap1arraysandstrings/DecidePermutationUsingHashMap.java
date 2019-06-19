@@ -6,7 +6,8 @@ import java.util.Map;
 public class DecidePermutationUsingHashMap implements DecidePermutation {
     @Override
     public Boolean isPermutationEachOther(String str1, String str2) {
-        if(str1 == null || str2 == null || (str1.length() != str2.length()))
+
+        if(!isValid(str1, str2))
             return Boolean.FALSE;
 
         int lengh = str1.length();
@@ -24,8 +25,8 @@ public class DecidePermutationUsingHashMap implements DecidePermutation {
             final Character key1 = entry.getKey();
             final Integer integer1 = entry.getValue();
             final Integer integer2 = charCountHashMapforStr2.get(key1);
-            if(integer2 == null)
-                return Boolean.FALSE;
+//            if(integer2 == null)
+//                return Boolean.FALSE;
             if(!integer1.equals(integer2))
                 return Boolean.FALSE;
         }

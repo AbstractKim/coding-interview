@@ -31,7 +31,9 @@ public class DecidePermutationTest {
     @Test
     public void isPermutationEachOther(){
 
-        DecidePermutation decidePermutation = new DecidePermutationUsingHashMap();
+//        DecidePermutation decidePermutation = new DecidePermutationUsingHashMap();
+//        DecidePermutation decidePermutation = new DecidePermutationUsingSortSSolution1ByBook();
+        DecidePermutation decidePermutation = new DecidePermutationUsingArraySolution2ByBook();
 
         for(Map.Entry<PairOfString, Boolean> entry: isTestingMap.entrySet()){
             final PairOfString key = entry.getKey();
