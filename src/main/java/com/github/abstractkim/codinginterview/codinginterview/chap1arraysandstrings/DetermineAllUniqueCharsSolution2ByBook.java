@@ -19,7 +19,7 @@ public class DetermineAllUniqueCharsSolution2ByBook implements DetermineAllUniqu
         for(int i =0 ; i < length; i++){
             final int movedOffset = 1 << (str.charAt(i) - 'a');
             int oneBitFlag = flagOfEachAsciiForLowerCase & movedOffset;
-            if(oneBitFlag == movedOffset)
+            if(oneBitFlag > 0)
                 return Boolean.FALSE;
             flagOfEachAsciiForLowerCase = flagOfEachAsciiForLowerCase | movedOffset;
         }
