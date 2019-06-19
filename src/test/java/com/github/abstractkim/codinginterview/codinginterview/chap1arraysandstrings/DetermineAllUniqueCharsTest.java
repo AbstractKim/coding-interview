@@ -25,9 +25,18 @@ public class DetermineAllUniqueCharsTest {
     @Test
     public void isUniqueChars(){
 //        final DetermineAllUniqueChars determineAllUniqueChars = new DetermineAllUniqueCharsBruthForce();
-        final DetermineAllUniqueChars determineAllUniqueChars = new DetermineAllUniqueCharsUsingHashMap();
+//        final DetermineAllUniqueChars determineAllUniqueChars = new DetermineAllUniqueCharsUsingHashMap();
+//        final DetermineAllUniqueChars determineAllUniqueChars = new DetermineAllUniqueCharsSolution1ByBook();
+        final DetermineAllUniqueChars determineAllUniqueChars = new DetermineAllUniqueCharsSolution2ByBook();
         for(Map.Entry<String, Boolean> entry: isUniqueMap.entrySet()){
             assertThat(determineAllUniqueChars.isUniqueChars(entry.getKey())).isEqualTo(entry.getValue());
+        }
+    }
+
+    @Test
+    public void test(){
+        for(Map.Entry<String, Boolean> entry: isUniqueMap.entrySet()){
+            System.out.println(entry.getKey().matches("[a-z]+"));
         }
     }
 
